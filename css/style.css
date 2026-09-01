@@ -1,0 +1,323 @@
+/* MOVE ON 品牌一頁式網站樣式表 - 含 Light Yellow 柔黃頁首與加大金句 */
+:root {
+  --primary-green: #6B9E78;
+  --mint-green: #A3E0C9;
+  --sage-green: #5F8D6D;
+  --forest-green: #2D5A37;
+  --dark-green: #0B2D20;
+  --bg-light: #F6FAFA;
+  --bg-card: #FFFFFF;
+  --text-main: #334A3C;
+  --text-muted: #5F7A6A;
+  --accent-orange: #FF8A65;
+  --shadow-soft: 0 10px 30px rgba(95, 141, 109, 0.08);
+  --shadow-hover: 0 15px 35px rgba(95, 141, 109, 0.15);
+  --radius-lg: 20px;
+  --radius-md: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Microsoft JhengHei", Arial, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Navbar 頁首樣式 - 背景換成溫柔 Light Yellow 淡黃色 (#FEF9E7) */
+.navbar {
+  background-color: rgba(254, 249, 231, 0.96) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(180, 160, 90, 0.12);
+  border-bottom: 1px solid rgba(240, 220, 160, 0.4);
+}
+
+.navbar-brand img {
+  height: 52px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--text-main) !important;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--forest-green) !important;
+}
+
+.btn-line {
+  background-color: #06C755;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 24px;
+  box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-line:hover {
+  background-color: #05B34C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
+}
+
+.btn-fb {
+  background-color: #1877F2;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 24px;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-fb:hover {
+  background-color: #166FE5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #F6FAFA 0%, #E8F4EE 100%);
+  position: relative;
+}
+
+.badge-pill-custom {
+  background-color: rgba(163, 224, 201, 0.35);
+  color: var(--forest-green);
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--forest-green);
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 35px;
+  max-width: 650px;
+}
+
+.hero-logo-badge {
+  max-width: 360px;
+  width: 100%;
+  filter: drop-shadow(0 15px 30px rgba(95, 141, 109, 0.12));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+/* 通用 Section 樣式 */
+.section-padding {
+  padding: 90px 0;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--forest-green);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 品牌故事卡片 */
+.story-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-soft);
+  border-left: 6px solid var(--sage-green);
+  margin-bottom: 30px;
+}
+
+/* 加大金句框樣式 (包含大型字體加強效果) */
+.quote-box {
+  background-color: #FEF9E7;
+  border-radius: var(--radius-md);
+  padding: 30px 25px;
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--forest-green);
+  margin-top: 30px;
+  border: 2px solid rgba(136, 212, 158, 0.4);
+  letter-spacing: 1px;
+}
+
+/* 痛點對比卡片 */
+.comparison-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 35px;
+  box-shadow: var(--shadow-soft);
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.comparison-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-myth {
+  border-top: 5px solid #FF7043;
+}
+
+.card-solution {
+  border-top: 5px solid var(--mint-green);
+}
+
+/* 7 DAY 挑戰時間軸卡片 */
+.day-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: 22px 25px;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.day-card:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.day-number {
+  background: linear-gradient(135deg, var(--mint-green), var(--sage-green));
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1.2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.day-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--forest-green);
+  margin-bottom: 4px;
+}
+
+.day-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Q芽寶區塊 */
+.ip-box {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0F8F4 100%);
+  border-radius: var(--radius-lg);
+  padding: 45px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* 頁尾 - 經典深濃綠背景 (#0B2D20) */
+.footer {
+  background-color: #0B2D20;
+  color: #FFFFFF;
+  padding: 60px 0 30px;
+}
+
+.footer img {
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  height: 60px;
+  width: auto;
+}
+
+.footer a {
+  color: #A3E0C9;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.footer .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 8px 22px;
+  transition: all 0.3s ease;
+}
+
+.footer .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #FFFFFF;
+}
+
+/* 響應式調整 */
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-section {
+    padding: 90px 0 50px;
+    text-align: center;
+  }
+  .hero-subtitle {
+    margin: 0 auto 30px;
+  }
+  .hero-logo-badge {
+    max-width: 260px;
+    margin-top: 30px;
+  }
+  .quote-box {
+    font-size: 1.35rem;
+  }
+}
