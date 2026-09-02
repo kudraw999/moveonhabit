@@ -11,6 +11,19 @@
     gtag('config', 'G-21WJW5N1WB');
   </script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('[data-ga-label]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'click', {
+            'event_category': el.dataset.gaCategory || 'CTA',
+            'event_label': el.dataset.gaLabel
+          });
+        });
+      });
+    });
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MOVE ON 動起來｜不用等準備好，先 MOVE ON！每天 10 分鐘，陪伴你建立可持續一輩子的運動習慣。">
@@ -181,7 +194,7 @@
                 在 LINE 官方帳號裡，Q芽寶每天會為你送上「今日任務」、「陪伴打卡」與「暖心金句」，讓你在養成運動習慣的路上不再孤單。
               </p>
               <div class="mt-4">
-                <a href="https://store.line.me/stickershop/product/35828136/zh-Hant" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg rounded-pill px-4 me-2 mb-2">
+                <a href="https://store.line.me/stickershop/product/35828136/zh-Hant" target="_blank" rel="noopener" class="btn btn-outline-success btn-lg rounded-pill px-4 me-2 mb-2" data-ga-category="CTA" data-ga-label="Story|Sticker|View">
                   <i class="bi bi-shop me-1"></i> 前往購買 Q芽寶 LINE 貼圖
                 </a>
               </div>
