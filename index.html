@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
+  <!-- Google tag (gtag.js) Google Analytics全域頁面瀏覽追蹤-->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES5713Z259"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ES5713Z259');
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('[data-ga-label]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          gtag('event', 'click', {
+            'event_category': el.dataset.gaCategory || 'CTA',
+            'event_label': el.dataset.gaLabel
+          });
+        });
+      });
+    });
+  </script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -46,12 +69,12 @@
             <li class="nav-item"><a class="nav-link" href="#challenge">7日挑戰</a></li>
             <li class="nav-item"><a class="nav-link" href="#community">社群打卡</a></li>
             <li class="nav-item ms-lg-2">
-              <a class="btn btn-line btn-sm px-3 my-1" href="https://lin.ee/yulFBQV" target="_blank" rel="noopener">
+              <a class="btn btn-line btn-sm px-3 my-1" href="https://lin.ee/yulFBQV" target="_blank" rel="noopener" data-ga-category="CTA" data-ga-label="Header LINE 加入">
                 <i class="bi bi-line fs-5"></i> 免費加入 LINE
               </a>
             </li>
             <li class="nav-item ms-lg-1">
-              <a class="btn btn-fb btn-sm px-3 my-1" href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener">
+              <a class="btn btn-fb btn-sm px-3 my-1" href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener" data-ga-category="CTA" data-ga-label="Header FB 跟蹤">
                 <i class="bi bi-facebook fs-5"></i> 追蹤 FB
               </a>
             </li>
@@ -74,10 +97,10 @@
               不追求每天做到 100 分，透過低門檻 10 分鐘挑戰與溫暖陪伴，讓運動從「想做的事」變成「生活的一部分」。
             </p>
             <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3">
-              <a href="https://lin.ee/yulFBQV" target="_blank" rel="noopener" class="btn btn-line btn-lg fs-6 py-3 px-4">
+              <a href="https://lin.ee/yulFBQV" target="_blank" rel="noopener" class="btn btn-line btn-lg fs-6 py-3 px-4" data-ga-category="CTA" data-ga-label="Hero LINE 加入">
                 <i class="bi bi-line fs-4 me-1"></i> 免費加入 LINE 帳號
               </a>
-              <a href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener" class="btn btn-fb btn-lg fs-6 py-3 px-4">
+              <a href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener" class="btn btn-fb btn-lg fs-6 py-3 px-4" data-ga-category="CTA" data-ga-label="Hero FB 追蹤">
                 <i class="bi bi-facebook fs-4 me-1"></i> 追蹤 FB 粉絲頁
               </a>
             </div>
@@ -283,7 +306,7 @@
                   加入 LINE 官方帳號，隨時私訊我們！由 Q芽寶與小幫手為你解答運動習慣的疑難雜症。我們也會不定期發送限定活動通知與最新體驗資訊，不洗版、零負擔，是你最安心的健康隨身管道！
                 </p>
                 <div class="mt-auto pt-3 text-center">
-                  <a href="https://lin.ee/yulFBQV" target="_blank" rel="noopener" class="btn btn-line btn-lg w-100 py-3">
+                  <a href="https://lin.ee/yulFBQV" target="_blank" rel="noopener" class="btn btn-line btn-lg w-100 py-3" data-ga-category="CTA" data-ga-label="Community LINE 加入">
                     <i class="bi bi-line fs-4 me-1"></i> 免費加入 LINE 帳號
                   </a>
                 </div>
@@ -307,7 +330,7 @@
                   在 FB 粉絲頁看見夥伴的運動日常（散步看見的天空、運動鞋、水壺都算數！），參與討論，感染更多身邊的親友！
                 </p>
                 <div class="mt-auto pt-3 text-center">
-                  <a href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener" class="btn btn-fb btn-lg w-100 py-3">
+                  <a href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener" class="btn btn-fb btn-lg w-100 py-3" data-ga-category="CTA" data-ga-label="Community FB 追蹤">
                     <i class="bi bi-facebook fs-4 me-1"></i> 追蹤 FB 粉絲頁
                   </a>
                 </div>
@@ -327,13 +350,13 @@
       <p class="small opacity-75 mb-4">Start Moving. Keep Going.</p>
 
       <div class="d-flex justify-content-center gap-3 mb-4">
-        <a href="https://lin.ee/yulFBQV" target="_blank" rel="noopener" class="btn btn-outline-light">
+        <a href="https://lin.ee/yulFBQV" target="_blank" rel="noopener" class="btn btn-outline-light" data-ga-category="CTA" data-ga-label="Footer LINE 帳號">
           <i class="bi bi-line me-1"></i> LINE 官方帳號
         </a>
-        <a href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener" class="btn btn-outline-light">
+        <a href="https://www.facebook.com/moveonhabit" target="_blank" rel="noopener" class="btn btn-outline-light" data-ga-category="CTA" data-ga-label="Footer FB 粉絲頁">
           <i class="bi bi-facebook me-1"></i> FB 粉絲專頁
         </a>
-        <a href="https://store.line.me/stickershop/product/35828136/zh-Hant" target="_blank" rel="noopener" class="btn btn-outline-light">
+        <a href="https://store.line.me/stickershop/product/35828136/zh-Hant" target="_blank" rel="noopener" class="btn btn-outline-light" data-ga-category="CTA" data-ga-label="Footer Q芽寶貼圖">
           <i class="bi bi-shop me-1"></i> Q芽寶貼圖
         </a>
       </div>
